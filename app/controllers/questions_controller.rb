@@ -7,10 +7,11 @@ class QuestionsController < ApplicationController
     end
 
     def new
+      @athlete = Athlete.find(params[:id])
     end
 
     def create
-        Question.create(title: params[:title], text:params[:text] )
+        Question.create(title: params[:title], text:params[:text], user_id: current_user.id, athlete_id: params[:id] )
     end
 
     def show

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   get   'questions' => 'questions#index'
   get   'athletes/:id/questions/new'  =>  'questions#new'
-  post  'questions'      =>  'questions#create'
+  post  'athletes/:id/questions'      =>  'questions#create'
   get   'questions/:id'      =>  'questions#show'
   get   'athletes'    =>  'athletes#index'
   get   'users/:id'   =>  'users#show'
