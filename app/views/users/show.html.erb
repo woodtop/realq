@@ -3,13 +3,13 @@
     <img src="https://i.imgur.com/Ubz2tox.png?../images/hanyu.jpg">
     <div class="show_user_info">
       <div class="show_user_name">
-        <%= @name %>さんの投稿一覧
+        <%= @name %>さんの質問一覧
       </div>
     </div>
   </div>
     <div class="show_right_content">
       <div class="show_right_content_header">
-        回答済みの数: 4件
+        回答済みの数: <%= @questions.length %>件
       </div>
       <div class="show_right_content_answers">
         <% @questions.each do |question| %>
