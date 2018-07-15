@@ -284,3 +284,18 @@ form .actions input {
   right: 10px;
   top: 10px;
 }
+
+.signin_nav ul, .user_nav ul {
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+}
+
+.user_nav ul span {
+  display: inline-block;
+}
+
+.user_nav > a {
+  display: block;
+}
