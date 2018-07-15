@@ -1,0 +1,286 @@
+body, html {
+  height: 100%;
+  background-color: #ddd;
+}
+
+h1, h2, h3, h4, h5, h6, p, body {
+  font-size: 14px;
+  color: #4a4a4a;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.wrapper{
+  min-width: 960px;
+  }
+
+header{
+  height: 46px;
+  background-color: white;
+  /*border-bottom: 2px solid #bbb;*/
+}
+
+h1{
+  height: 46px;
+  line-height: 46px;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+h1 a {
+  display: block;
+  padding-top: 5px;
+}
+
+h1 a:hover {
+  background-color: transparent;
+}
+
+h1 a img {
+  height: 20px;
+}
+
+h2{
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.contents{
+  height: 100%;
+  margin: 20px auto 0;
+  background-color: white;
+  max-width: 600px;
+}
+
+form{
+  width: 600px;
+  background-color: white;
+  padding: 5px 0 0;
+}
+
+.input-box{
+  float: left;
+  width: 500px;
+}
+
+.input-box input{
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+form img{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  float: left;
+  height: 24px;
+  margin: 0 5px 5px 34px;
+}
+
+.submit-button{
+  width: 70px;
+  margin: 10px 25px 0 0;
+}
+
+form textarea{
+  width: 500px;
+  border: 1px solid #ccc;
+}
+
+.button-box{
+  float: right;
+  height: 70px;
+}
+
+.message{
+  min-height: 100px;
+/*  width: 598px;*/
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-bottom: none;
+  padding: 10px;
+}
+
+.user_box img{
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  float: left;
+  height: 30px;
+  width: 30px;
+  margin: 10px 10px 10px 0px;
+}
+
+.user_box{
+  display: flex;
+  /*width: 505px;*/
+  align-items: center;
+  margin: 0 auto;
+}
+
+.user_info{
+  float: left;
+}
+
+.message_box{
+  /*width: 505px;*/
+  padding: 9px 0 10px;
+  margin: 0 auto;
+}
+
+.question_title{
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.time{
+  color: #bbb;
+}
+
+.text{
+  margin: 10px 0 0 0;
+  line-height: 18px;
+}
+
+/*showページ*/
+
+.show_content{
+  height: 100%;
+  margin: 5px auto 0;
+  background-color: white;
+  max-width: 600px;
+}
+
+.show_user_info_box{
+  display: flex;
+  border-bottom: solid #bbb 1px;
+  margin: 0 0 16px 0;
+}
+
+.show_user_info{
+
+}
+
+.show_user_info_box img{
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  float: left;
+  height: 120px;
+  width: 120px;
+  margin: 10px 10px 10px 10px;
+}
+
+.show_user_name{
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.show_user_detail{
+  padding: 0 0 0 10px;
+  color: #bbb;
+}
+
+.show_right_content_header{
+  padding: 0 0 10px 10px;
+  border-bottom: solid #bbb 1px;
+  color: #888;
+}
+
+.show_right_content_answers{
+  padding: 10px;
+}
+
+.show_message_box{
+  /*width: 505px;*/
+  margin: 0 auto;
+  padding: 10px 0 10px 0;
+  border-bottom: solid #bbb 1px;
+}
+
+.show_question_title{
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 0 0 10px 0;
+}
+
+.show_text{
+  line-height: 18px;
+}
+.question_text{
+  line-height: 18px;
+}
+
+h2 {
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+h2 span {
+  display: block;
+  margin-top: -15px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+form {
+  margin-top: 30px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form label {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding: 15px 3px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+form textarea {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding: 15px 3px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+
+form .actions input {
+  display: table;
+  margin: 20px auto;
+  background: #4a4a4a;
+  color: #fff;
+  padding: 15px 60px;
+  border-radius: 6px;
+  border: 0;
+}
+
+.signin_nav, .user_nav {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
