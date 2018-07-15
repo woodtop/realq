@@ -1,0 +1,37 @@
+<div class="show_content">
+<div class="show_user_info_box">
+  <img src="<%= @athlete.image %>">
+  <div class="show_user_info">
+    <div class="show_user_name">
+      <%= @athlete.name %>
+    </div>
+    <div class="show_user_detail">
+      <%= @athlete.job %>
+    </div>
+  </div>
+</div>
+  <div class="show_right_content">
+    <div class="show_right_content_header">
+      回答数: 4件
+    </div>
+    <div class="show_right_content_answers">
+      <% @athlete.questions.each do |question| %>
+        <div class="show_message_box">
+          <p class="show_question_title">
+            <%= question.title %>
+          <p>
+          <p class="question_text">
+            <%= question.text %>
+          </p>
+          <div class="user_box clearfix">
+            <img src="<%= @athlete.image %>">
+            <p class="user_info">回答日時: 2018年7月13日</p>
+          </div>
+          <p class="show_text">
+            <%= question.answer.text %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

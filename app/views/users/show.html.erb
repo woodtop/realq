@@ -12,26 +12,19 @@
         回答済みの数: 4件
       </div>
       <div class="show_right_content_answers">
-
         <% @questions.each do |question| %>
-          <div class="content_post" ">
-            <%= simple_format(question.text) %>
-            <span class="name"><%= question.title %></span>
+          <div class="show_message_box">
+            <p class="show_question_title">
+              Q.<%= question.title %>
+            <p>
+            <p class="question_text">
+              <%= simple_format(question.text) %>
+            </p>
+            <a href="#">
+              回答を見る
+            </a>
           </div>
         <% end %>
-        <%= paginate(@questions) %>
-    
-        <div class="show_message_box">
-          <p class="show_question_title">
-            Q.プログラミングを勉強してみてどうでしたか？
-          <p>
-          <p class="question_text">
-            楽しかったです。ブラインドタッチも習得できつつあります。
-          </p>
-          <a href="#">
-            回答を見る
-          </a>
-        </div>
       </div>
       <div class="show_right_content_header">
         未回答の質問: 4件
