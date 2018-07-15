@@ -1,0 +1,22 @@
+<div class="show_content">
+    <div class="show_right_content">
+      <div class="show_right_content_answers">
+        <div class="show_message_box">
+          <p class="show_question_title">
+            <%= @question.title %>
+          <p>
+          <p class="question_text">
+            <%= @question.text %>
+          </p>
+          <div class="user_box clearfix">
+            <img src="<%= @question.athlete.image %>">
+            <p class="user_info">回答日時: <%= @question.created_at.strftime("%Y年%m月/%d日/%H時") %></p>
+          </div>
+          <p class="show_text">
+            <%= @question.answer.text %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
