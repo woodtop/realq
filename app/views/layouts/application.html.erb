@@ -4,6 +4,7 @@
   <title>Realq</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -13,20 +14,31 @@
     <div class="header__bar row">
       <h1 class="grid-6">
         <a href="/">
-          <%= image_tag 'logo_realq.png' %>
+          <%= image_tag 'logo_realq.png', :alt => "REALQ" %>
         </a>
       </h1>
       <% if user_signed_in? %>
+        <div class="nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="user_nav grid-6">
-          <span><%= current_user.name %>
-            <ul class="user__info">
-              <li>
-                <a href="/users/<%= current_user.id %>">マイページ</a>
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-              </li>
-            </ul>
-          </span>
-          <a class="post" href="/questions/new">投稿する</a>
+          <ul class="user__info">
+            <li class="user">
+              <%= image_tag 'https://i.imgur.com/Ubz2tox.png' %>
+              <strong><%= current_user.name %></strong>さん、ようこそ！
+            </li>
+            <li>
+              <a class="post button" href="/questions/new">質問を投稿する</a>
+            </li>
+            <li>
+              <a href="/users/<%= current_user.id %>">マイページ</a>
+            </li>
+            <li>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </li>
+          </ul>
         </div>
       <% else %>
         <div class="grid-6 signin_nav">
