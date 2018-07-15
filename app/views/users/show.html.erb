@@ -20,49 +20,16 @@
             <p class="question_text">
               <%= simple_format(question.text) %>
             </p>
-            <a href="#">
-              回答を見る
-            </a>
+            <% if question.answer %>
+              <a href="/questions/<%= question.id %>">
+                回答を見る
+              </a>
+            <% end %>
           </div>
         <% end %>
       </div>
       <div class="show_right_content_header">
         未回答の質問: 4件
-      </div>
-      <div class="show_right_content_answers">
-        <div class="show_message_box">
-          <p class="show_question_title">
-            Q.プログラミングを勉強してみてどうでしたか？
-          <p>
-          <p class="question_text">
-            楽しかったです。ブラインドタッチも習得できつつあります。
-          </p>
-          <a href="#">
-            回答を見る
-          </a>
-        </div>
-        <div class="show_message_box">
-          <p class="show_question_title">
-            Q.プログラミングを勉強してみてどうでしたか？
-          <p>
-          <p class="question_text">
-            楽しかったです。ブラインドタッチも習得できつつあります。
-          </p>
-          <a href="#">
-            回答を見る
-          </a>
-        </div>
-        <div class="show_message_box">
-          <p class="show_question_title">
-            Q.プログラミングを勉強してみてどうでしたか？
-          <p>
-          <p class="question_text">
-            楽しかったです。ブラインドタッチも習得できつつあります。
-          </p>
-          <a href="#">
-            回答を見る
-          </a>
-        </div>
       </div>
     </div>
   </div>
