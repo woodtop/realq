@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'qustions#index'
+  root 'questions#index'
   devise_for :users
   get 'questions' => 'questions#index'
   get   'questions/new'  =>  'questions#new'
