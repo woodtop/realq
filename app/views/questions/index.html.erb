@@ -7,7 +7,12 @@
     <div class="message clearfix">
       <div class="user_box clearfix">
         <img src="<%= question.athlete.image %>">
-        <p class="user_info"><%= question.athlete.name %>さん/<%= question.athlete.job %>への質問です</p>
+        <p class="user_info">
+          <a href="/athletes/<%= question.athlete.id %>">
+            <%= question.athlete.name %>さん/<%= question.athlete.job %>
+          </a>
+          への質問です
+        </p>
       </div>
       <div class="message_box">
         <p class="question_title">
