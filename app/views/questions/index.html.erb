@@ -6,8 +6,8 @@
   <% @questions.each do |question| %>
     <div class="message clearfix">
       <div class="user_box clearfix">
-        <img src="images/keisukehonda.jpg">
-        <p class="user_info">本田圭佑さん/サッカー選手への質問です</p>
+        <img src="<%= question.athlete.image %>">
+        <p class="user_info"><%= question.athlete.name %>さん/<%= question.athlete.job %>への質問です</p>
       </div>
       <div class="message_box">
         <p class="question_title">
@@ -15,9 +15,7 @@
         <p>
         <p class="text">
           <%= question.text %>
-          <a href="#">
-            <続きを読む>
-          </a>
+          <%= link_to '続きを読む', "/questions/#{question.id}" %>
         </p>
       </div>
     </div>
