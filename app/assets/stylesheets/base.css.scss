@@ -194,6 +194,36 @@ form textarea{
   margin: 10px 10px 10px 10px;
 }
 
+.show_user_info_box_list {
+  a {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+  }
+
+  img {
+    width: 56px;
+    height: 56px;
+    margin-right: 20px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+}
+
+.link_athletes a {
+  padding: 20px;
+  border: 2px solid #00d8ff;
+  background-color: #fff;
+  text-align: center;
+  color: #00d8ff;
+  display: block;
+  font-weight: bold;
+}
+
 .show_user_name{
   font-weight: bold;
   font-size: 22px;
