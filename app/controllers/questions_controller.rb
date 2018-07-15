@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :show]
 
     def index
       @questions = Question.order("created_at DESC").page(params[:page]).per(5)
@@ -11,6 +11,10 @@ class QuestionsController < ApplicationController
 
     def create
         Question.create(title: params[:title], text:params[:text] )
+    end
+
+    def show
+      @question = Question.find(params[:id])
     end
 
   def move_to_index
