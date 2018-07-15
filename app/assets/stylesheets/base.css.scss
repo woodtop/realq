@@ -6,7 +6,7 @@ body, html {
 h1, h2, h3, h4, h5, h6, p, body {
   font-size: 14px;
   color: #4a4a4a;
-  font-family: sans-serif;
+  font-family: Avenir, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -22,21 +22,21 @@ h1, h2, h3, h4, h5, h6, p, body {
   }
 
 header{
-  height: 46px;
+  height: 48px;
   background-color: white;
   /*border-bottom: 2px solid #bbb;*/
 }
 
 h1{
-  height: 46px;
-  line-height: 46px;
+  height: 48px;
+  line-height: 48px;
   font-size: 18px;
   padding-left: 20px;
 }
 
 h1 a {
   display: inline-block;
-  padding-top: 5px;
+  padding-top: 8px;
 }
 
 h1 a:hover {
@@ -54,9 +54,18 @@ h2{
   text-align: center;
 }
 
+a {
+  color: #00d8ff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .contents{
   height: 100%;
-  margin: 20px auto 0;
+  margin: 5px auto 0;
   background-color: white;
   max-width: 600px;
 }
@@ -105,12 +114,12 @@ form textarea{
 /*  width: 598px;*/
   margin: 0 auto;
   background-color: #fff;
-  border: 1px solid #bbb;
+  border: 1px solid #ddd;
   border-bottom: none;
   padding: 10px;
 
   &:last-child {
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #ddd;
   }
 }
 
@@ -159,9 +168,11 @@ form textarea{
 
 .show_content{
   height: 100%;
-  margin: 5px auto 0;
+  margin: 20px auto 0;
   background-color: white;
   max-width: 600px;
+  border-radius: 2px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
 }
 
 .show_user_info_box{
@@ -197,7 +208,7 @@ form textarea{
 
 .show_right_content_header{
   padding: 0 0 10px 10px;
-  border-bottom: solid #bbb 1px;
+  border-bottom: solid #ddd 1px;
   color: #888;
 }
 
@@ -209,7 +220,7 @@ form textarea{
   /*width: 505px;*/
   margin: 0 auto;
   padding: 10px 0 10px 0;
-  border-bottom: solid #bbb 1px;
+  border-bottom: solid #ddd 1px;
 }
 
 .show_question_title{
