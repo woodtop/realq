@@ -1,10 +1,76 @@
- <div class="contents row" >
-    <p><%= @name %>さんの投稿一覧</p>
-    <% @questions.each do |question| %>
-      <div class="content_post" ">
-        <%= simple_format(question.text) %>
-        <span class="name"><%= question.title %></span>
+  <div class="show_content">
+  <div class="show_user_info_box">
+    <img src="../images/hanyu.jpg">
+    <div class="show_user_info">
+      <div class="show_user_name">
+        <%= @name %>さんの投稿一覧
       </div>
-    <% end %>
-    <%= paginate(@questions) %>
+    </div>
   </div>
+    <div class="show_right_content">
+      <div class="show_right_content_header">
+        回答済みの数: 4件
+      </div>
+      <div class="show_right_content_answers">
+
+        <% @questions.each do |question| %>
+          <div class="content_post" ">
+            <%= simple_format(question.text) %>
+            <span class="name"><%= question.title %></span>
+          </div>
+        <% end %>
+        <%= paginate(@questions) %>
+    
+        <div class="show_message_box">
+          <p class="show_question_title">
+            Q.プログラミングを勉強してみてどうでしたか？
+          <p>
+          <p class="question_text">
+            楽しかったです。ブラインドタッチも習得できつつあります。
+          </p>
+          <a href="#">
+            回答を見る
+          </a>
+        </div>
+      </div>
+      <div class="show_right_content_header">
+        未回答の質問: 4件
+      </div>
+      <div class="show_right_content_answers">
+        <div class="show_message_box">
+          <p class="show_question_title">
+            Q.プログラミングを勉強してみてどうでしたか？
+          <p>
+          <p class="question_text">
+            楽しかったです。ブラインドタッチも習得できつつあります。
+          </p>
+          <a href="#">
+            回答を見る
+          </a>
+        </div>
+        <div class="show_message_box">
+          <p class="show_question_title">
+            Q.プログラミングを勉強してみてどうでしたか？
+          <p>
+          <p class="question_text">
+            楽しかったです。ブラインドタッチも習得できつつあります。
+          </p>
+          <a href="#">
+            回答を見る
+          </a>
+        </div>
+        <div class="show_message_box">
+          <p class="show_question_title">
+            Q.プログラミングを勉強してみてどうでしたか？
+          <p>
+          <p class="question_text">
+            楽しかったです。ブラインドタッチも習得できつつあります。
+          </p>
+          <a href="#">
+            回答を見る
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
