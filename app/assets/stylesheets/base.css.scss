@@ -108,6 +108,10 @@ form textarea{
   border: 1px solid #bbb;
   border-bottom: none;
   padding: 10px;
+
+  &:last-child {
+    border-bottom: 1px solid #bbb;
+  }
 }
 
 .user_box img{
