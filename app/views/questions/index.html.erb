@@ -1,7 +1,29 @@
-<div>
+<div class="show_content">
+<div class="show_right_content">
+  <div class="show_right_content_answers">
+
+  <div class="contents">
   <% @questions.each do |question| %>
-    <p><%= question.title %></p>
-    <p><%= question.text %></p>
+    <div class="message clearfix">
+      <div class="user_box clearfix">
+        <img src="images/keisukehonda.jpg">
+        <p class="user_info">本田圭佑さん/サッカー選手への質問です</p>
+      </div>
+      <div class="message_box">
+        <p class="question_title">
+          Q.<%= question.title %>
+        <p>
+        <p class="text">
+          <%= question.text %>
+          <a href="#">
+            <続きを読む>
+          </a>
+        </p>
+      </div>
+    </div>
   <% end %>
   <%= paginate(@questions) %>
+</div>
+</div>
+
 </div>
