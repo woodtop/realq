@@ -35,7 +35,7 @@ h1{
 }
 
 h1 a {
-  display: block;
+  display: inline-block;
   padding-top: 5px;
 }
 
@@ -371,15 +371,20 @@ form .actions input {
     a {
       display: block;
       padding: 20px;
-
-      &.button {
-        margin: 10px;
-        background: #4a4a4a;
-        border-radius: 6px;
-        border: 0;
-        color: #fff;
-        text-align: center;
-      }
     }
   }
+}
+
+
+
+.show_user_info .button {
+  margin: 10px;
+  background: #4a4a4a;
+  border-radius: 6px;
+  border: 0;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
 }
