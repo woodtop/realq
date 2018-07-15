@@ -12,7 +12,7 @@
 </div>
   <div class="show_right_content">
     <div class="show_right_content_header">
-      回答数: 4件
+      回答数: <%= @athlete.questions.length %>件
     </div>
     <div class="show_right_content_answers">
       <% @athlete.questions.each do |question| %>
@@ -27,9 +27,11 @@
             <img src="<%= @athlete.image %>">
             <p class="user_info">回答日時: 2018年7月13日</p>
           </div>
-          <p class="show_text">
-            <%= question.answer.text %>
-          </p>
+          <% if question.answer %>
+            <p class="show_text">
+              <%= question.answer.text %>
+            </p>
+          <% end %>
         </div>
       <% end %>
     </div>
