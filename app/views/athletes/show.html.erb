@@ -20,7 +20,7 @@
       <% @athlete.questions.each do |question| %>
         <div class="show_message_box">
           <p class="show_question_title">
-            <%= question.title %>
+            Q. <%= question.title %>
           <p>
           <p class="question_text">
             <%= question.text %>
@@ -31,7 +31,7 @@
           </div>
           <% if question.answer %>
             <p class="show_text">
-              <%= question.answer.text %>
+              A. <%= question.answer.text %>
             </p>
           <% end %>
         </div>

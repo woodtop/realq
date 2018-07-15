@@ -3,7 +3,7 @@
       <div class="show_right_content_answers">
         <div class="show_message_box">
           <p class="show_question_title">
-            Q.<%= @question.title %>
+            Q. <%= @question.title %>
           <p>
           <p class="question_text">
             <%= @question.text %>
@@ -14,7 +14,7 @@
             <p class="user_info">回答日時: <%= @question.answer.created_at.strftime("%Y年%m月/%d日/%H時") %></p>
           </div>
           <p class="show_text">
-            A.<%= @question.answer.text %>
+            A. <%= @question.answer.text %>
           </p>
           <% end %>
         </div>
