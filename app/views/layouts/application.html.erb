@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Realq</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,7 +11,11 @@
 
   <header class="header">
     <div class="header__bar row">
-      <h1 class="grid-6"><a href="/">REALQ</a></h1>
+      <h1 class="grid-6">
+        <a href="/">
+          <%= image_tag 'logo_realq.png' %>
+        </a>
+      </h1>
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
           <span><%= current_user.name %>
@@ -24,7 +29,7 @@
           <a class="post" href="/questions/new">投稿する</a>
         </div>
       <% else %>
-        <div class="grid-6">
+        <div class="grid-6 signin_nav">
           <%= link_to "ログイン", new_user_session_path, :class => 'post' %>
           <%= link_to "新規登録", new_user_registration_path, :class => 'post' %>
         </div>
