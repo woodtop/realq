@@ -8,7 +8,7 @@
     <div class="show_user_detail">
       <%= @athlete.job %>
     </div>
-    <a class="post button" href="/questions/new">この選手に質問する</a>
+    <a class="post button" href="/athletes/<%= @athlete.id %>/questions/new">この選手に質問する</a>
 
   </div>
 </div>
