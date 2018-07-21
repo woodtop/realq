@@ -34,8 +34,8 @@
             A. <%= question.answer.text %>
           </p>
           <% else %>
-            <% if @athlete.user %>
-            <%= link_to 'この質問に回答する', "/questions/#{question.id}/answer/new" %>
+            <% if @athlete.user_id == current_user.id %>
+              <%= link_to 'この質問に回答する', "/questions/#{question.id}/answer/new" %>
             <% end %>
           <% end %>
         </div>
