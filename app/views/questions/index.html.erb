@@ -5,7 +5,7 @@
     <a href="/athletes">アスリート一覧はこちら</a>
   </div>
   <div class="contents">
-  <% @questions__has_answer.each do |question| %>
+  <% @questions_has_answer.each do |question| %>
     <div class="message clearfix">
       <div class="user_box clearfix">
         <img src="<%= question.athlete.image %>">
@@ -27,7 +27,7 @@
       </div>
     </div>
   <% end %>
-<%= paginate(@questions__has_answer) %>
+<%= paginate(@questions_has_answer) %>
 </div>
 </div>
 
