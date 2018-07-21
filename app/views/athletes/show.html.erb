@@ -14,7 +14,7 @@
 </div>
   <div class="show_right_content">
     <div class="show_right_content_header">
-      回答数: <%= @athlete.questions.length %>件
+      質問数: <%= @athlete.questions.length %>件
     </div>
     <div class="show_right_content_answers">
       <% @athlete.questions.each do |question| %>
@@ -25,14 +25,18 @@
           <p class="question_text">
             <%= question.text %>
           </p>
+          <% if question.answer %>
           <div class="user_box clearfix">
             <img src="<%= @athlete.image %>">
             <p class="user_info">回答日時: 2018年7月13日</p>
           </div>
-          <% if question.answer %>
-            <p class="show_text">
-              A. <%= question.answer.text %>
-            </p>
+          <p class="show_text">
+            A. <%= question.answer.text %>
+          </p>
+          <% else %>
+            <% if @athlete.user_id == current_user.id %>
+              <%= link_to 'この質問に回答する', "/questions/#{question.id}/answer/new" %>
+            <% end %>
           <% end %>
         </div>
       <% end %>

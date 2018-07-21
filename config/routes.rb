@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get   'athletes'    =>  'athletes#index'
   get   'users/:id'   =>  'users#show'
   get   'athletes/:id' =>  'athletes#show'
+  get   'questions/:id/answer/new' => 'answers#new'
+  post  'questions/:id/answer' => 'answers#create'
 end
