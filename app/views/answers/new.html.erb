@@ -1,0 +1,12 @@
+<div class="contents row">
+  <%= form_tag("/questions/#{@question.id}/answer", method: :post) do %>
+    <h3>
+      Q.<%= @question.title %>
+    </h3>
+    <p>
+      <%= @question.text %>
+    </p>
+    <textarea cols="30" name="text" placeholder="上記質問への回答をここに記入" rows="10"></textarea>
+    <div class="actions"><input type="submit" value="回答する"></div>
+  <% end %>
+</div>
