@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
     def index
-      @questions = Question.order("created_at DESC").page(params[:page]).per(5)
+      @questions_has_answer = Question.joins(:answer).order("created_at DESC").page(params[:page]).per(5)
     end
 
     def new
